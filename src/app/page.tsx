@@ -2,10 +2,10 @@ import Link from "next/link";
 
 export default function HomePage() {
   const resinCodes = [
-    { code: "01", name: "PET / PETE", material: "Polyethylene terephtalat" },
-    { code: "02", name: "HDPE", material: "Polyethylene mật độ cao" },
+    { code: "01", name: "PET / PETE", material: "Polyetylen terephtalat" },
+    { code: "02", name: "HDPE", material: "Polyetylen mật độ cao" },
     { code: "03", name: "PVC", material: "Polyvinyl clorua" },
-    { code: "04", name: "LDPE", material: "Polyethylene mật độ thấp" },
+    { code: "04", name: "LDPE", material: "Polyetylen mật độ thấp" },
     { code: "05", name: "PP", material: "Polypropylen" },
     { code: "06", name: "PS", material: "Polystyren" },
     { code: "07", name: "Nhựa khác", material: "Nhóm khác hoặc hỗn hợp" },
