@@ -1,3 +1,4 @@
+import { mkdir } from "node:fs/promises";
 import AxeBuilder from "@axe-core/playwright";
 import { expect, test } from "@playwright/test";
 
@@ -12,10 +13,32 @@ test.describe("home foundation", () => {
     await expect(page.locator("html")).toHaveAttribute("lang", "vi");
     await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
     await expect(page.getByRole("heading", { level: 1 })).toHaveCount(1);
+    await expect(page.getByRole("list", { name: "Bảy mã nhận diện nhựa" }).getByRole("listitem")).toHaveCount(7);
+    await expect(page.getByRole("link", { name: /Khám phá 7 mã nhựa/ })).toHaveAttribute(
+      "href",
+      "#thu-vien",
+    );
+    await expect(page.getByRole("link", { name: "Xem cách phân loại" })).toHaveAttribute(
+      "href",
+      "#cach-phan-loai",
+    );
+    await expect(page.getByRole("heading", { name: "Chưa có điểm nào được xác minh để công bố." })).toBeVisible();
     expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(1440);
 
     const results = await new AxeBuilder({ page }).analyze();
     expect(results.violations).toEqual([]);
+    await mkdir("docs/evidence/FE-02", { recursive: true });
+    await page.screenshot({ path: "docs/evidence/FE-02/home-1440.png", fullPage: true });
+
+    await page.getByRole("link", { name: /Khám phá 7 mã nhựa/ }).click();
+    await expect(page).toHaveURL(/#thu-vien$/);
+    await expect(page.locator("#thu-vien")).toBeInViewport();
+    await page.getByRole("link", { name: "Xem cách phân loại" }).click();
+    await expect(page).toHaveURL(/#cach-phan-loai$/);
+    await expect(page.locator("#cach-phan-loai")).toBeInViewport();
+    await page.getByRole("link", { name: "Tìm hiểu nguyên tắc hiển thị" }).click();
+    await expect(page).toHaveURL(/#nguyen-tac-du-lieu$/);
+    await expect(page.locator("#nguyen-tac-du-lieu")).toBeInViewport();
   });
 
   test("keeps keyboard skip navigation and accessible mobile menu", async ({ page }) => {
@@ -39,6 +62,8 @@ test.describe("home foundation", () => {
 
     const results = await new AxeBuilder({ page }).analyze();
     expect(results.violations).toEqual([]);
+    await mkdir("docs/evidence/FE-02", { recursive: true });
+    await page.screenshot({ path: "docs/evidence/FE-02/home-390.png", fullPage: true });
   });
 
   test("respects reduced motion preferences", async ({ page }) => {
