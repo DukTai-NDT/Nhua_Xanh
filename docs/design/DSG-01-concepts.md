@@ -1,6 +1,6 @@
 # DSG-01 — Hai hướng Modern Eco Editorial
 
-**Trạng thái:** Đề xuất để PO/khách hàng xem xét; chưa chọn concept, chưa được duyệt G1.
+**Trạng thái:** PO đã chọn Concept A làm hướng cho DSG-02 (13/10/2026); chưa được duyệt G1.
 **Ticket:** `DSG-01 Art direction` (P0, phụ thuộc `SP0-02`; tiền đề `FE-01` là một design contract được con người duyệt).
 **Phạm vi:** Hai concept cùng hướng Modern Eco Editorial; bộ token đề xuất; phác thảo Header/Footer desktop và mobile; nguồn tài sản. Đây là tài liệu ý tưởng, không phải thiết kế hi-fi hay thiết kế đã duyệt.
 
@@ -15,7 +15,7 @@
 | Footer | Tờ ghi chú sáng, ba cột nội dung | Dải xanh rừng tương phản, bố cục chỉ mục và hàng ghi nguồn |
 | Phù hợp khi | Muốn nội dung giải thích mang tính khám phá, thân thiện với học sinh sinh viên | Muốn ưu tiên tra cứu nhanh và tạo cảm giác một cẩm nang có cấu trúc |
 
-**Khuyến nghị của Design Agent:** Concept A là điểm bắt đầu phù hợp hơn với ý “Sổ tay vật liệu đô thị” trong design brief; Concept B giữ lại như phương án đối chiếu. Đây chỉ là đề xuất của agent. PO/khách hàng cần chọn hoặc yêu cầu chỉnh trước khi FE dùng token/visual contract. Không tự ghi nhận lựa chọn hay G1.
+**Khuyến nghị ban đầu của Design Agent:** Concept A là điểm bắt đầu phù hợp hơn với ý “Sổ tay vật liệu đô thị”; Concept B là phương án đối chiếu. Sau đó PO đã chọn Concept A cho DSG-02 qua [bình luận PR #4](https://github.com/DukTai-NDT/Nhua_Xanh/pull/4#issuecomment-6139008847). Lựa chọn này không phải phê duyệt G1 và không cho phép FE triển khai giao diện.
 
 ## Concept A — Sổ tay vật liệu
 
@@ -106,9 +106,16 @@ Copy điều hướng theo IA hiện hành: `Trang chủ`, `Các loại nhựa`,
 | Ảnh vật thể / Hà Nội | Chưa có | Chưa chọn hoặc cấp phép | Chưa dùng trong phác thảo; bổ sung ở DSG-02 khi có ảnh được phép hoặc hình minh họa tự tạo, ghi rõ tính minh họa. |
 | Logo | Chưa có; quyết định hiện tại cho phép bỏ qua logo trong demo | Không có logo được duyệt | Wordmark chữ thuần, không vẽ biểu tượng nhận diện giả. |
 
+## Quyết định PO — 13/10/2026
+
+- Chọn Concept A — “Sổ tay vật liệu” làm hướng art direction cho DSG-02.
+- Concept B giữ làm tư liệu đối chiếu; không triển khai song song.
+- Phạm vi không bao gồm G1, 5 màn hình hi-fi, component states, prototype, asset/font cuối hoặc implementation giao diện.
+- Bằng chứng: [bình luận PO trên PR #4](https://github.com/DukTai-NDT/Nhua_Xanh/pull/4#issuecomment-6139008847).
+
 ## Chưa được quyết định / yêu cầu PO
 
-1. Chọn Concept A, Concept B, hoặc yêu cầu chỉnh; chỉ ghi nhận sau khi có trả lời của PO/khách hàng.
+1. Concept A đã được chọn cho DSG-02; hướng này chưa được xem là G1.
 2. G1 cần người có thẩm quyền duyệt visual direction, wireframe và các màn hình hi-fi/responsive theo design gate. Tài liệu này chỉ giải quyết hai concept và Header/Footer; DSG-02 còn phải giao 5 màn hình, component states và prototype theo design system.
 3. Chưa có asset ảnh thực tế/được cấp phép; hình ảnh trong sản phẩm vẫn cần kế hoạch quyền sử dụng và kiểm tra trước khi dùng.
 
@@ -118,9 +125,9 @@ Không tạo giao diện sản phẩm, code FE, ảnh sản phẩm, trang home/l
 
 ## Handover
 
-- **Status:** IN_REVIEW — concept pack sẵn sàng review, lựa chọn/G1 đang chờ PO/khách hàng.
+- **Status:** IN_REVIEW — PO đã chọn Concept A; G1 vẫn đang chờ.
 - **Đã giao:** hai concept Modern Eco Editorial; hai bộ token; Header/Footer desktop/mobile; font/asset provenance.
-- **Chưa làm:** DSG-02 hi-fi/prototype; chưa có lựa chọn concept hoặc G1; chưa có screenshot browser.
+- **Chưa làm:** DSG-02 hi-fi/prototype; G1 chưa được duyệt; chưa có screenshot browser.
 - **Checks:** kiểm tra cấu trúc tài liệu và SVG là thủ công; không chạy build/lint/test vì repo chưa có app/package scripts.
 - **Rủi ro:** màu muted cần contrast review; font subset tiếng Việt và license cần lưu cùng asset nếu được nhúng; tên/wordmark chưa phải nhận diện cuối.
-- **Kế tiếp:** PO/khách hàng chọn hướng và ghi nhận quyết định; sau đó DSG-02 hoàn tất màn hình và G1 trước khi FE-01 triển khai yếu tố thị giác.
+- **Kế tiếp:** Design tiếp tục DSG-02 theo Concept A; PO xem xét bàn giao và ghi G1 riêng trước khi FE-01 triển khai yếu tố thị giác.
