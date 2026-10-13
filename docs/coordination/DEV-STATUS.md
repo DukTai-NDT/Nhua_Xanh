@@ -1,4 +1,4 @@
-# Development status ? Nh?a Xanh H? N?i
+# Development status — Nhựa Xanh Hà Nội
 
 > Latest coordination snapshot for PO/human review. An open PR is not accepted or merged; tests are reported as PASS only when actually run.
 
@@ -20,7 +20,7 @@
 | README follow-up | IN_REVIEW | `fix/readme-links-encoding`, [PR #2](https://github.com/DukTai-NDT/Nhua_Xanh/pull/2) | All 14 links resolve; 0 NUL bytes remain; `git diff --check` PASS. Documentation-only; app checks NOT RUN. |
 | `SP0-03` Data discovery | IN_REVIEW | `research/SP0-03-hanoi-candidates`, [PR #3](https://github.com/DukTai-NDT/Nhua_Xanh/pull/3) | 18 sourced candidate leads from a 2026 Coca-Cola Vietnam program page. `SOURCED=18`, `VERIFIED=0`, `PUBLISHED=0`; not map-ready. `git diff --cached --check` PASS. DAT-01 needs human/operator verification and reuse permission. Q-001 remains open. |
 | `DSG-01` Art direction | IN_REVIEW | `docs/DSG-01-modern-eco-concepts`, [draft PR #4](https://github.com/DukTai-NDT/Nhua_Xanh/pull/4) | Concept A — “Sổ tay vật liệu” selected by PO in the PR #4 comment and recorded as D-OPS-002. Concept B remains reference only. DSG-01 pack is still in review; this selection is not G1. |
-| `DSG-02` UX & hi-fi | IN_PROGRESS | `docs/DSG-02-hi-fi`; PR pending | Design Agent assigned to produce five screens at desktop 1440/mobile 390, states, prototype, design QA, token/type/contrast and asset provenance. Concept A selected; no third-party design tool used/authorized. |
+| `DSG-02` UX & hi-fi | IN_REVIEW | `docs/DSG-02-hi-fi`, [PR #6](https://github.com/DukTai-NDT/Nhua_Xanh/pull/6) | Five screens at desktop 1440/mobile 390, state controls, local prototype, tokens, contrast notes and asset provenance. `node --check`, HTML structure check and `git show --check` PASS. Browser screenshots/visual QA NOT RUN because no browser is available. Concept A selected; G1 pending; no third-party design tool used. |
 | `FE-01` Foundation | PREPARATION — visual work gated | Plan in [PR #5](https://github.com/DukTai-NDT/Nhua_Xanh/pull/5) | Technical structure/scripts are planned; no app scaffold or visual implementation until DSG-02 review and explicit G1 approval. |
 | `QA-01` Test scaffolding | PREPARATION — implementation gated | Plan in [PR #5](https://github.com/DukTai-NDT/Nhua_Xanh/pull/5) | Foundation test matrix/CI plan prepared; implementation/execution depends on FE-01. |
 
@@ -30,13 +30,13 @@
 - Q-001 remains open for the exact demo presentation of candidate collection points. Candidate research is internal and not included in a public dataset.
 - Q-002 is ANSWERED per the PO comment on PR #4. DSG-02 must complete and receive human review; FE visual work remains gated until explicit G1 approval.
 - Google Stitch was assessed as unnecessary for DSG-01. No Stitch access, project creation, login, or cost occurred.
-- PRs #1–#5 are open and unmerged; no PR was self-approved or auto-merged. No production deployment occurred.
+- PRs #1–#6 are open and unmerged; no PR was self-approved or auto-merged. No production deployment occurred.
 
 ## Next actions
 
-1. Human reviews PRs #1–#5. Concept A is already selected; DSG-02 is in progress.
-2. Design completes DSG-02 responsive hi-fi screens, component states and prototype; then PO reviews and records G1 explicitly.
-3. Prepare FE-01 and QA-01 plans now. Start implementation only after G1; run QA-01 after FE-01 exists.
+1. Human reviews PRs #1–#6. DSG-02 is ready for design review; Concept A is selected, while G1 remains pending.
+2. PO/qualified reviewer reviews the five screens and prototype, gives feedback, and records explicit G1 approval before visual FE implementation.
+3. FE-01 and QA-01 plans are prepared in PR #5. Start implementation only after G1; run QA-01 after FE-01 exists.
 4. PO/operator continues DAT-01 verification from SP0-03 candidates. Do not publish candidates as operating/verified points.
 
 ## Checks and limitations
@@ -45,4 +45,5 @@
 - PR #2: local link check (14 links, 0 broken), NUL-byte check (0), `git diff --check` PASS.
 - PR #3: `git diff --cached --check` PASS; app tests/build/lint/typecheck NOT RUN; documentation-only research.
 - PR #4: PowerShell XML parse for both SVG files PASS; `git diff --cached --check` PASS; app checks NOT RUN; browser screenshots NOT RUN.
+- PR #6: `node --check docs/design/dsg02-prototype.js` PASS; Python `HTMLParser` nesting check PASS (0 mismatches, 0 unclosed tags); `git show --check --oneline HEAD` PASS. Browser screenshot/visual QA NOT RUN because no browser executable or CUA browser surface is available; app lint/build/unit/E2E NOT RUN because no app/scripts exist.
 - This snapshot does not claim independent QA of the design agent's artifacts or human acceptance of any ticket.
