@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Concept A — Sổ tay vật liệu</title><desc id="desc">Phác thảo tĩnh Header và Footer desktop, cùng Header và Footer mobile, theo hướng Modern Eco Editorial.</desc>
+  <rect width="1600" height="1000" fill="#F2F0E7"/>
+  <text x="64" y="68" fill="#193F2A" font-family="Arial,sans-serif" font-size="28" font-weight="700">DSG-01 / CONCEPT A</text>
+  <text x="64" y="104" fill="#52665A" font-family="Arial,sans-serif" font-size="18">SỔ TAY VẬT LIỆU · giấy sáng, lề chú giải, nhịp biên tập</text>
+  <text x="64" y="160" fill="#193F2A" font-family="Arial,sans-serif" font-size="15" font-weight="700" letter-spacing="2">DESKTOP · 1440</text>
+  <rect x="64" y="180" width="1040" height="735" rx="12" fill="#FFFFFF" stroke="#D7DCCF"/>
+  <rect x="64" y="180" width="1040" height="48" rx="12" fill="#E7F0E7"/>
+  <text x="88" y="210" fill="#193F2A" font-family="Arial,sans-serif" font-size="14">GỢI Ý THỊ GIÁC · Ảnh đồ vật thật sẽ bổ sung sau khi có quyền sử dụng</text>
+  <rect x="64" y="228" width="1040" height="112" fill="#F8F7F2"/>
+  <text x="96" y="276" fill="#193F2A" font-family="Georgia,serif" font-size="29" font-weight="700">Nhựa Xanh Hà Nội</text>
+  <text x="96" y="305" fill="#52665A" font-family="Arial,sans-serif" font-size="13" letter-spacing="1.6">SỔ TAY VẬT LIỆU ĐÔ THỊ</text>
+  <text x="410" y="285" fill="#193F2A" font-family="Arial,sans-serif" font-size="16">Trang chủ</text>
+  <text x="530" y="285" fill="#193F2A" font-family="Arial,sans-serif" font-size="16">Các loại nhựa</text>
+  <text x="683" y="285" fill="#193F2A" font-family="Arial,sans-serif" font-size="16">Cách phân loại</text>
+  <text x="842" y="285" fill="#193F2A" font-family="Arial,sans-serif" font-size="16">Điểm thu gom</text>
+  <rect x="944" y="255" width="136" height="48" rx="8" fill="#357A54"/><text x="961" y="284" fill="#FFFFFF" font-family="Arial,sans-serif" font-size="14" font-weight="700">Tìm điểm thu gom</text>
+  <line x1="88" y1="340" x2="1080" y2="340" stroke="#D7DCCF"/>
+  <text x="96" y="394" fill="#52665A" font-family="Arial,sans-serif" font-size="14" letter-spacing="1.5">MẪU NỘI DUNG · KHÔNG PHẢI TRANG ĐÃ DUYỆT</text>
+  <text x="96" y="462" fill="#193F2A" font-family="Georgia,serif" font-size="52" font-weight="700">Một món đồ,</text><text x="96" y="520" fill="#193F2A" font-family="Georgia,serif" font-size="52" font-weight="700">nhiều điều cần biết.</text>
+  <text x="96" y="565" fill="#52665A" font-family="Arial,sans-serif" font-size="17">Tiêu đề lớn và chú giải lề giúp nội dung có nhịp như trang sổ tay.</text>
+  <rect x="96" y="602" width="170" height="44" rx="8" fill="#357A54"/><text x="115" y="630" fill="#FFFFFF" font-family="Arial,sans-serif" font-size="15">Khám phá 7 loại nhựa</text>
+  <rect x="650" y="390" width="386" height="245" rx="8" fill="#E7F0E7" stroke="#D7DCCF"/>
+  <path d="M795 430h95l-10 30v115q0 20-20 20h-35q-20 0-20-20V460z" fill="#FFFFFF" stroke="#357A54" stroke-width="3"/>
+  <path d="M808 430v-24h68v24M807 477h68" fill="none" stroke="#357A54" stroke-width="3"/>
+  <text x="678" y="605" fill="#52665A" font-family="Arial,sans-serif" font-size="13">Hình chai vector tự dựng · minh họa, không phải ảnh</text>
+  <line x1="88" y1="690" x2="1080" y2="690" stroke="#D7DCCF"/>
+  <rect x="64" y="712" width="1040" height="203" fill="#F8F7F2"/>
+  <text x="96" y="757" fill="#193F2A" font-family="Georgia,serif" font-size="24" font-weight="700">Tìm hiểu trước khi bỏ đi.</text>
+  <text x="96" y="789" fill="#52665A" font-family="Arial,sans-serif" font-size="14">Thông tin để nhận diện và chuẩn bị vật liệu.</text>
+  <text x="502" y="755" fill="#193F2A" font-family="Arial,sans-serif" font-size="15" font-weight="700">KHÁM PHÁ</text>
+  <text x="502" y="786" fill="#52665A" font-family="Arial,sans-serif" font-size="14">Các loại nhựa</text><text x="502" y="812" fill="#52665A" font-family="Arial,sans-serif" font-size="14">Cách phân loại</text>
+  <text x="700" y="755" fill="#193F2A" font-family="Arial,sans-serif" font-size="15" font-weight="700">TẠI HÀ NỘI</text><text x="700" y="786" fill="#52665A" font-family="Arial,sans-serif" font-size="14">Điểm thu gom</text><text x="700" y="812" fill="#52665A" font-family="Arial,sans-serif" font-size="14">Nguồn dữ liệu</text>
+  <text x="900" y="755" fill="#193F2A" font-family="Arial,sans-serif" font-size="15" font-weight="700">LƯU Ý</text><text x="900" y="786" fill="#52665A" font-family="Arial,sans-serif" font-size="14">Mã nhựa không bảo đảm</text><text x="900" y="812" fill="#52665A" font-family="Arial,sans-serif" font-size="14">được tiếp nhận tại mọi nơi.</text>
+  <line x1="96" y1="846" x2="1072" y2="846" stroke="#D7DCCF"/><text x="96" y="878" fill="#52665A" font-family="Arial,sans-serif" font-size="13">Nhựa Xanh Hà Nội · tên làm việc, chưa phải logo được duyệt</text>
+  <text x="1155" y="160" fill="#193F2A" font-family="Arial,sans-serif" font-size="15" font-weight="700" letter-spacing="2">MOBILE · 390</text>
+  <rect x="1155" y="180" width="390" height="735" rx="18" fill="#FFFFFF" stroke="#D7DCCF"/>
+  <rect x="1155" y="180" width="390" height="48" rx="18" fill="#E7F0E7"/><text x="1174" y="210" fill="#193F2A" font-family="Arial,sans-serif" font-size="12">GỢI Ý THỊ GIÁC</text>
+  <rect x="1155" y="228" width="390" height="88" fill="#F8F7F2"/><text x="1175" y="267" fill="#193F2A" font-family="Georgia,serif" font-size="20" font-weight="700">Nhựa Xanh Hà Nội</text><text x="1175" y="290" fill="#52665A" font-family="Arial,sans-serif" font-size="10" letter-spacing="1">SỔ TAY VẬT LIỆU ĐÔ THỊ</text>
+  <rect x="1482" y="246" width="44" height="44" rx="8" fill="#FFFFFF" stroke="#357A54" stroke-width="2"/><path d="M1493 259h22M1493 268h22M1493 277h22" stroke="#193F2A" stroke-width="2"/>
+  <text x="1180" y="360" fill="#52665A" font-family="Arial,sans-serif" font-size="10" letter-spacing="1">MẪU NỘI DUNG · PHÁC THẢO</text>
+  <text x="1180" y="420" fill="#193F2A" font-family="Georgia,serif" font-size="32" font-weight="700">Một món đồ,</text><text x="1180" y="459" fill="#193F2A" font-family="Georgia,serif" font-size="32" font-weight="700">nhiều điều cần biết.</text>
+  <text x="1180" y="490" fill="#52665A" font-family="Arial,sans-serif" font-size="14">Tiêu đề lớn, câu ngắn và</text><text x="1180" y="512" fill="#52665A" font-family="Arial,sans-serif" font-size="14">khoảng trắng để đọc thoải mái.</text>
+  <rect x="1180" y="536" width="235" height="44" rx="8" fill="#357A54"/><text x="1194" y="564" fill="#FFFFFF" font-family="Arial,sans-serif" font-size="13">Khám phá 7 loại nhựa</text>
+  <rect x="1180" y="600" width="340" height="130" rx="8" fill="#E7F0E7"/><path d="M1315 626h58l-6 17v56q0 12-12 12h-22q-12 0-12-12v-56z" fill="#FFFFFF" stroke="#357A54" stroke-width="2"/><path d="M1323 626v-14h42v14" fill="none" stroke="#357A54" stroke-width="2"/>
+  <text x="1180" y="756" fill="#52665A" font-family="Arial,sans-serif" font-size="11">Footer · các nhóm xếp dọc</text>
+  <rect x="1155" y="774" width="390" height="141" fill="#F8F7F2"/><text x="1180" y="807" fill="#193F2A" font-family="Georgia,serif" font-size="19" font-weight="700">Tìm hiểu trước khi bỏ đi.</text><text x="1180" y="838" fill="#193F2A" font-family="Arial,sans-serif" font-size="12" font-weight="700">KHÁM PHÁ  ·  TẠI HÀ NỘI  ·  LƯU Ý</text><text x="1180" y="867" fill="#52665A" font-family="Arial,sans-serif" font-size="12">Điều hướng và nguồn xếp thành các nhóm rõ ràng.</text><text x="1180" y="892" fill="#52665A" font-family="Arial,sans-serif" font-size="11">Wordmark tạm · chưa phải nhận diện cuối</text>
+</svg>
