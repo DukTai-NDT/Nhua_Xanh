@@ -19,23 +19,24 @@
 | `SP0-01` Repo audit | IN_REVIEW | `chore/SP0-01-repo-audit`, [PR #1](https://github.com/DukTai-NDT/Nhua_Xanh/pull/1) | Audit confirms the baseline above. PR #1 has no reviews, comments, or inline review threads as of 2026-10-13; human review remains pending. App checks NOT RUN. |
 | README follow-up | IN_REVIEW | `fix/readme-links-encoding`, [PR #2](https://github.com/DukTai-NDT/Nhua_Xanh/pull/2) | All 14 links resolve; 0 NUL bytes remain; `git diff --check` PASS. Documentation-only; app checks NOT RUN. |
 | `SP0-03` Data discovery | IN_REVIEW | `research/SP0-03-hanoi-candidates`, [PR #3](https://github.com/DukTai-NDT/Nhua_Xanh/pull/3) | 18 sourced candidate leads from a 2026 Coca-Cola Vietnam program page. `SOURCED=18`, `VERIFIED=0`, `PUBLISHED=0`; not map-ready. `git diff --cached --check` PASS. DAT-01 needs human/operator verification and reuse permission. Q-001 remains open. |
-| `DSG-01` Art direction | IN_REVIEW | `docs/DSG-01-modern-eco-concepts`, [draft PR #4](https://github.com/DukTai-NDT/Nhua_Xanh/pull/4) | Two distinct Modern Eco Editorial proposals, token sets, desktop/mobile Header/Footer SVG boards, and asset/font provenance. SVG XML parse and `git diff --cached --check` PASS. No browser screenshots; boards are static review artifacts. No Stitch used. PO concept selection pending; no G1 approval. |
-| `FE-01` Foundation | BLOCKED ? approval gate | Not started | Backlog dependencies include `SP0-01` and `DSG-01`; the concept pack is proposed but not selected. Visual implementation must wait for human design approval/G1 and the required responsive design handoff. |
-| `QA-01` Test scaffolding | BLOCKED ? dependency | Not started | Depends on FE-01. No tests or CI configuration exist yet. |
+| `DSG-01` Art direction | IN_REVIEW | `docs/DSG-01-modern-eco-concepts`, [draft PR #4](https://github.com/DukTai-NDT/Nhua_Xanh/pull/4) | Concept A — “Sổ tay vật liệu” selected by PO in the PR #4 comment and recorded as D-OPS-002. Concept B remains reference only. DSG-01 pack is still in review; this selection is not G1. |
+| `DSG-02` UX & hi-fi | IN_PROGRESS | `docs/DSG-02-hi-fi`; PR pending | Design Agent assigned to produce five screens at desktop 1440/mobile 390, states, prototype, design QA, token/type/contrast and asset provenance. Concept A selected; no third-party design tool used/authorized. |
+| `FE-01` Foundation | PREPARATION — visual work gated | Plan pending | FE-01/QA-01 readiness is being documented. No app scaffold or visual implementation until DSG-02 review and explicit G1 approval. |
+| `QA-01` Test scaffolding | PREPARATION — implementation gated | Plan pending | Test cases and CI/script plan being documented. Implementation/execution depends on FE-01. |
 
 ## Approval and scope notes
 
-- Existing client answers remain in `12-DECISIONS-RISKS.md`; no new human decision or G1 approval was received in this sprint work.
+- Existing client answers remain in `12-DECISIONS-RISKS.md`. New human decision D-OPS-002 selects Concept A for DSG-02; it does not approve G1.
 - Q-001 remains open for the exact demo presentation of candidate collection points. Candidate research is internal and not included in a public dataset.
-- Q-002 now asks the PO/customer to choose Concept A, Concept B, or request revisions. A concept choice alone is not G1; FE visual work remains gated on the required design review/approval.
+- Q-002 is ANSWERED per the PO comment on PR #4. DSG-02 must complete and receive human review; FE visual work remains gated until explicit G1 approval.
 - Google Stitch was assessed as unnecessary for DSG-01. No Stitch access, project creation, login, or cost occurred.
-- PRs #1?#4 are open and unmerged; no PR was self-approved or auto-merged. No production deployment occurred.
+- PRs #1–#4 are open and unmerged; no PR was self-approved or auto-merged. No production deployment occurred.
 
 ## Next actions
 
-1. Human reviews PRs #1?#4 and selects/revises a concept in response to Q-002.
-2. Design completes DSG-02 responsive hi-fi screens, component states and prototype against the selected direction; human records G1 approval.
-3. After required dependencies/gates are satisfied, start `FE-01` on its ticket branch; then assign `QA-01` after FE-01 exists.
+1. Human reviews PRs #1–#4. Concept A is already selected; DSG-02 is in progress.
+2. Design completes DSG-02 responsive hi-fi screens, component states and prototype; then PO reviews and records G1 explicitly.
+3. Prepare FE-01 and QA-01 plans now. Start implementation only after G1; run QA-01 after FE-01 exists.
 4. PO/operator continues DAT-01 verification from SP0-03 candidates. Do not publish candidates as operating/verified points.
 
 ## Checks and limitations

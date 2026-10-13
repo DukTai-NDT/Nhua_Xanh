@@ -30,13 +30,12 @@ The repo already records answers on customer/demo nature, temporary branding/gen
 - Impacts:
 ```
 
-## Q-002 ? Select a DSG-01 concept for the next design stage
+## Q-002 — Select a DSG-01 concept for the next design stage
 
-- Status: `OPEN` (proposal is ready; no concept selection or G1 approval is recorded).
+- Status: `ANSWERED`.
 - Asked by / date: Tech Lead / 2026-10-13.
 - Context: `DSG-01` proposal in [PR #4](https://github.com/DukTai-NDT/Nhua_Xanh/pull/4), with two Modern Eco Editorial directions and responsive Header/Footer boards.
-- Question: Which direction should Design carry into DSG-02: Concept A ? S? tay v?t li?u, Concept B ? M?c l?c ?? th?, or a requested revision?
-- Recommendation: Review both boards and choose or request specific changes. This concept choice is not itself G1 approval; DSG-02 must still deliver the required hi-fi responsive screens, component states, and prototype for human review before FE visual implementation.
-- Human answer: _Pending._
-- Approval/evidence link: _Pending._
-- Impacts: `DSG-02`, `FE-01`, G1.
+- Question: Which direction should Design carry into DSG-02: Concept A, Concept B, or a requested revision?
+- Human answer (2026-10-13): Chọn Concept A — “Sổ tay vật liệu” làm hướng art direction cho DSG-02. Concept B được giữ làm tư liệu đối chiếu, không triển khai song song. Phê duyệt này **không phải G1** và không duyệt hi-fi, component states, prototype, asset/font cuối hoặc implementation giao diện.
+- Approval/evidence link: [PO comment on PR #4](https://github.com/DukTai-NDT/Nhua_Xanh/pull/4#issuecomment-6139008847).
+- Impacts: `DSG-02`, `FE-01`, `QA-01`, G1. FE visual work vẫn chờ DSG-02 review và phê duyệt G1 rõ ràng.
