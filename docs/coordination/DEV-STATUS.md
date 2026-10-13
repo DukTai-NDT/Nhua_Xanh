@@ -22,7 +22,7 @@
 | `DSG-01` Art direction | IN_REVIEW | `docs/DSG-01-modern-eco-concepts`, [draft PR #4](https://github.com/DukTai-NDT/Nhua_Xanh/pull/4) | Concept A — “Sổ tay vật liệu” selected by PO in the PR #4 comment and recorded as D-OPS-002. Concept B remains reference only. DSG-01 pack is still in review; this selection is not G1. |
 | `DSG-02` UX & hi-fi | IN_REVIEW — G1 APPROVED | `docs/DSG-02-hi-fi`, [PR #6](https://github.com/DukTai-NDT/Nhua_Xanh/pull/6) | PO approved G1 for commit `70234846095737d6d09657bda5025601631b9a29` in [PR #6 comment](https://github.com/DukTai-NDT/Nhua_Xanh/pull/6#issuecomment-6139240456). Browser visual QA remains mandatory in FE/QA. |
 | `FE-01` Foundation | IN_REVIEW | `feat/FE-01-foundation`, [PR #7](https://github.com/DukTai-NDT/Nhua_Xanh/pull/7), commit `0495e13db8dca4e3d4cdd2042fa63093975d6cb3` | Next.js App Router, strict TypeScript, Tailwind v4, responsive shell/Header/Footer, skip link, focus/reduced motion, 404 and Vietnamese metadata. Lint/typecheck/build/audit PASS; Chromium smoke at 1440/390 and axe PASS; screenshots attached. Human review pending. |
-| `QA-01` Test scaffolding | IN_REVIEW | `qa/QA-01-test-scaffolding`, [PR #8](https://github.com/DukTai-NDT/Nhua_Xanh/pull/8), commit `da34d94a237ba07c849087a8c818f904d0aaad04` | Vitest/Testing Library, Playwright/axe, CI workflow. Local npm ci/lint/typecheck/unit 4/4/build/E2E 4/4/audit PASS. PR is stacked on PR #7; GitHub Actions has not run yet. Independent human QA/review pending. |
+| `QA-01` Test scaffolding | IN_REVIEW | `qa/QA-01-test-scaffolding`, [PR #8](https://github.com/DukTai-NDT/Nhua_Xanh/pull/8), commit `da34d94a237ba07c849087a8c818f904d0aaad04` | Vitest/Testing Library, Playwright/axe, CI workflow. Local checks PASS; GitHub Actions run `38359210593` completed SUCCESS for lint, typecheck, unit, build and Chromium browser tests. PR is stacked on PR #7; independent human QA/review remains pending. |
 
 ## Sprint W2 progress (updated 2026-10-13)
 
@@ -41,7 +41,7 @@
 3. Review PR #11 (FE-02) after its #7/#8 base chain; its current GitHub status is open/unmerged. Re-check mergeability after parent branches are integrated.
 4. Once CNT-01 and CNT-02 approvals are recorded, start FE-03 and FE-04 respectively on ticket branches; keep them independent where dependencies permit.
 
-No PRs #7–#11 had submitted reviews at this snapshot; #9 and #10 had no issue comments. GitHub Actions remote status for #8/#11 remains unverified. No self-approval, merge, or production deployment occurred.
+No PRs #7–#11 had submitted reviews at this snapshot; #9 and #10 had no issue comments. GitHub Actions run #38359210593 for PR #8 succeeded; no PR-triggered run was found for PR #11. No self-approval, merge, or production deployment occurred.
 
 ## Approval and scope notes
 
@@ -75,6 +75,6 @@ No PRs #7–#11 had submitted reviews at this snapshot; #9 and #10 had no issue 
 - PR #6: `node --check docs/design/dsg02-prototype.js` PASS; Python `HTMLParser` nesting check PASS (0 mismatches, 0 unclosed tags); `git show --check --oneline HEAD` PASS. Browser screenshot/visual QA NOT RUN because no browser executable or CUA browser surface is available; app lint/build/unit/E2E NOT RUN because no app/scripts exist.
 - G1: PO comment on PR #6 explicitly approves commit `70234846095737d6d09657bda5025601631b9a29`; approval is limited to design handoff and requires FE visual QA. It is not a QA/accessibility/UAT/release approval.
 - PR #7 / FE-01 at commit `0495e13db8dca4e3d4cdd2042fa63093975d6cb3`: `npm ci`, `npm run lint`, `npm run typecheck`, `npm run build`, `npm audit`, `git diff --check` PASS; manual production-build Chromium/axe smoke PASS on desktop 1440/mobile 390 and 404. Screenshots are in `docs/evidence/FE-01/`. Feature routes and their loading/empty/error states are outside FE-01.
-- PR #8 / QA-01 at commit `da34d94a237ba07c849087a8c818f904d0aaad04`: `npm ci`, lint, typecheck, unit (4/4), build, E2E (4/4), `npm audit`, `git diff --check` PASS. Chromium axe has 0 violations for covered home desktop/mobile and 404. CI workflow is configured but remote GitHub Actions has not run; this is not independent QA.
+- PR #8 / QA-01 at commit `da34d94a237ba07c849087a8c818f904d0aaad04`: `npm ci`, lint, typecheck, unit (4/4), build, E2E (4/4), `npm audit`, `git diff --check` PASS. Chromium axe has 0 violations for covered home desktop/mobile and 404. GitHub Actions run `38359210593` completed SUCCESS; this is still not independent QA or human acceptance.
 - PR #11 / FE-02 at latest commit `c951905`: `npm ci`, format, lint, typecheck, unit (4/4), build, Chromium E2E (4/4), `npm audit`, `git diff --check` PASS; rerun after Vietnamese polymer-name correction. Axe reports 0 violations on home desktop/mobile and 404; E2E asserts all three section CTAs. Screenshots and detailed test commands are committed under `docs/evidence/FE-02/` and `docs/FE-02-home.md`. CI remote and independent/PO review remain pending.
 - This snapshot does not claim independent QA of the design agent's artifacts or human acceptance of any ticket.
