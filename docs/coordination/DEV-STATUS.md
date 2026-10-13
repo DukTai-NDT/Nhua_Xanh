@@ -21,8 +21,8 @@
 | `SP0-03` Data discovery | IN_REVIEW | `research/SP0-03-hanoi-candidates`, [PR #3](https://github.com/DukTai-NDT/Nhua_Xanh/pull/3) | 18 sourced candidate leads from a 2026 Coca-Cola Vietnam program page. `SOURCED=18`, `VERIFIED=0`, `PUBLISHED=0`; not map-ready. `git diff --cached --check` PASS. DAT-01 needs human/operator verification and reuse permission. Q-001 remains open. |
 | `DSG-01` Art direction | IN_REVIEW | `docs/DSG-01-modern-eco-concepts`, [draft PR #4](https://github.com/DukTai-NDT/Nhua_Xanh/pull/4) | Concept A — “Sổ tay vật liệu” selected by PO in the PR #4 comment and recorded as D-OPS-002. Concept B remains reference only. DSG-01 pack is still in review; this selection is not G1. |
 | `DSG-02` UX & hi-fi | IN_REVIEW — G1 APPROVED | `docs/DSG-02-hi-fi`, [PR #6](https://github.com/DukTai-NDT/Nhua_Xanh/pull/6) | PO approved G1 for commit `70234846095737d6d09657bda5025601631b9a29` in [PR #6 comment](https://github.com/DukTai-NDT/Nhua_Xanh/pull/6#issuecomment-6139240456). Browser visual QA remains mandatory in FE/QA. |
-| `FE-01` Foundation | IN_PROGRESS | `feat/FE-01-foundation`; PR pending | G1 handoff approved. Implement Next.js App Router, strict TypeScript, Tailwind v4, tokens, responsive Header/Footer, skip link, focus/reduced motion, 404 and Vietnamese metadata. Browser QA at 1440/390 is mandatory. |
-| `QA-01` Test scaffolding | READY AFTER FE-01 BASELINE | Plan in [PR #5](https://github.com/DukTai-NDT/Nhua_Xanh/pull/5); implementation branch pending | Start after FE-01 package/scripts exist; add CI, unit/E2E/a11y tooling and independently review the foundation. |
+| `FE-01` Foundation | IN_REVIEW | `feat/FE-01-foundation`, [PR #7](https://github.com/DukTai-NDT/Nhua_Xanh/pull/7), commit `0495e13db8dca4e3d4cdd2042fa63093975d6cb3` | Next.js App Router, strict TypeScript, Tailwind v4, responsive shell/Header/Footer, skip link, focus/reduced motion, 404 and Vietnamese metadata. Lint/typecheck/build/audit PASS; Chromium smoke at 1440/390 and axe PASS; screenshots attached. Human review pending. |
+| `QA-01` Test scaffolding | IN_REVIEW | `qa/QA-01-test-scaffolding`, [PR #8](https://github.com/DukTai-NDT/Nhua_Xanh/pull/8), commit `da34d94a237ba07c849087a8c818f904d0aaad04` | Vitest/Testing Library, Playwright/axe, CI workflow. Local npm ci/lint/typecheck/unit 4/4/build/E2E 4/4/audit PASS. PR is stacked on PR #7; GitHub Actions has not run yet. Independent human QA/review pending. |
 
 ## Approval and scope notes
 
@@ -30,20 +30,21 @@
 - Q-001 remains open for the exact demo presentation of candidate collection points. Candidate research is internal and not included in a public dataset.
 - Q-002 is ANSWERED. G1 is approved per the PO comment on PR #6; G2–G5 and DSG-02/FE/QA acceptance remain open.
 - Google Stitch was assessed as unnecessary for DSG-01. No Stitch access, project creation, login, or cost occurred.
-- PRs #1–#6 are open and unmerged; PR #4 remains draft. GitHub currently reports them mergeable. No PR was self-approved or auto-merged. No production deployment occurred.
+- PRs #1–#8 are open and unmerged; PR #4 remains draft. PR #8 is intentionally stacked on FE-01 PR #7. PR #7 was reported mergeable after refresh; PR #8 reported mergeability pending when created. No PR was self-approved or auto-merged. No production deployment occurred.
 
 ## Suggested review / merge order (not approval)
 
-1. Review PR #1 coordination/audit updates; PR #2 README repair and PR #3 sourced-candidate research are independent and may be reviewed in parallel.
+1. Review PR #1 coordination/audit updates; PR #2 README repair, PR #3 sourced-candidate research and PR #5 planning are independent and may be reviewed in parallel.
 2. PR #5 is a planning document and may merge independently. Review/merge PR #4 DSG-01 before PR #6 DSG-02 because DSG-02 depends on its selected concept.
 3. Review/merge PR #6 after PR #4. G1 is already recorded against its exact commit, but that comment is not PR approval or merge.
-4. FE-01 is based on `main` and references the G1-approved handoff; its PR can be reviewed while PR #6 awaits human merge. Do not merge FE-01 before the design PRs and required reviews are resolved.
+4. Review PR #7 FE-01 against the G1-approved design after PR #4/#6 design review. PR #7 is based on `main`; do not merge it before design review and required human checks are resolved.
+5. PR #8 QA-01 uses PR #7 as its base. Review it after FE-01 review; retarget/rebase only after PR #7 is integrated. Its local tests PASS, but GitHub Actions and independent review remain pending.
 
 ## Next actions
 
 1. Human reviews PRs #1–#6 and selects a merge order; no agent merges or approves them.
-2. FE-01 implements the G1-approved handoff and captures browser evidence at 1440/390; G1 does not waive visual QA.
-3. Start QA-01 after FE-01 package/scripts exist; add CI and independent browser/accessibility checks.
+2. Human reviews PR #7 FE-01 (screenshots, keyboard nav, mobile menu, overflow, Vietnamese glyphs, reduced motion, contrast) and then PR #8 QA-01 (review test/CI design and independent coverage).
+3. After FE-01/QA-01 integration, start CNT-01 and CNT-02 source-checked drafts; content claims remain pending domain/PO approval. FE-02 can proceed against approved G1 while preserving its scope.
 4. PO/operator continues DAT-01 verification from SP0-03 candidates. Do not publish candidates as operating/verified points.
 
 ## Checks and limitations
@@ -54,4 +55,6 @@
 - PR #4: PowerShell XML parse for both SVG files PASS; `git diff --cached --check` PASS; app checks NOT RUN; browser screenshots NOT RUN.
 - PR #6: `node --check docs/design/dsg02-prototype.js` PASS; Python `HTMLParser` nesting check PASS (0 mismatches, 0 unclosed tags); `git show --check --oneline HEAD` PASS. Browser screenshot/visual QA NOT RUN because no browser executable or CUA browser surface is available; app lint/build/unit/E2E NOT RUN because no app/scripts exist.
 - G1: PO comment on PR #6 explicitly approves commit `70234846095737d6d09657bda5025601631b9a29`; approval is limited to design handoff and requires FE visual QA. It is not a QA/accessibility/UAT/release approval.
+- PR #7 / FE-01 at commit `0495e13db8dca4e3d4cdd2042fa63093975d6cb3`: `npm ci`, `npm run lint`, `npm run typecheck`, `npm run build`, `npm audit`, `git diff --check` PASS; manual production-build Chromium/axe smoke PASS on desktop 1440/mobile 390 and 404. Screenshots are in `docs/evidence/FE-01/`. Feature routes and their loading/empty/error states are outside FE-01.
+- PR #8 / QA-01 at commit `da34d94a237ba07c849087a8c818f904d0aaad04`: `npm ci`, lint, typecheck, unit (4/4), build, E2E (4/4), `npm audit`, `git diff --check` PASS. Chromium axe has 0 violations for covered home desktop/mobile and 404. CI workflow is configured but remote GitHub Actions has not run; this is not independent QA.
 - This snapshot does not claim independent QA of the design agent's artifacts or human acceptance of any ticket.
