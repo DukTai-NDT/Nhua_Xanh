@@ -27,7 +27,7 @@
 
 - Ticket / role: `SP0-01 Repo audit` / Tech Lead
 - Status: IN_REVIEW
-- Branch / commit / PR: `chore/SP0-01-repo-audit` / pending commit / pending PR
+- Branch / commit / PR: `chore/SP0-01-repo-audit` / `c0e90b7` (audit commit; final status-link commit follows) / [PR #1](https://github.com/DukTai-NDT/Nhua_Xanh/pull/1)
 - Scope: inspect repository and baseline only; no application code was created and product requirements were not changed.
 - Tests/build/lint/typecheck/unit/E2E: **NOT RUN**. There is no app, package manifest, dependency installation, or scripts to execute. This is not a PASS.
 - Informational environment commands: `node --version` → `v22.16.0`; `npm --version` → `10.9.2`.
@@ -62,4 +62,4 @@
 - Screenshots/preview: not applicable to repository audit.
 - Design/content approvals: none requested or granted by this audit.
 - Questions: `Q-001` remains open for the candidate demo point presentation rule; `Q-002` records the pending design/G1 contract needed by FE-01.
-- PR: pending creation; update this field after GitHub handoff.
+- PR: [#1 — repository audit and FE-01 recommendation](https://github.com/DukTai-NDT/Nhua_Xanh/pull/1), open for PO review.
