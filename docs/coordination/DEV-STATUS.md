@@ -20,23 +20,30 @@
 | README follow-up | IN_REVIEW | `fix/readme-links-encoding`, [PR #2](https://github.com/DukTai-NDT/Nhua_Xanh/pull/2) | All 14 links resolve; 0 NUL bytes remain; `git diff --check` PASS. Documentation-only; app checks NOT RUN. |
 | `SP0-03` Data discovery | IN_REVIEW | `research/SP0-03-hanoi-candidates`, [PR #3](https://github.com/DukTai-NDT/Nhua_Xanh/pull/3) | 18 sourced candidate leads from a 2026 Coca-Cola Vietnam program page. `SOURCED=18`, `VERIFIED=0`, `PUBLISHED=0`; not map-ready. `git diff --cached --check` PASS. DAT-01 needs human/operator verification and reuse permission. Q-001 remains open. |
 | `DSG-01` Art direction | IN_REVIEW | `docs/DSG-01-modern-eco-concepts`, [draft PR #4](https://github.com/DukTai-NDT/Nhua_Xanh/pull/4) | Concept A — “Sổ tay vật liệu” selected by PO in the PR #4 comment and recorded as D-OPS-002. Concept B remains reference only. DSG-01 pack is still in review; this selection is not G1. |
-| `DSG-02` UX & hi-fi | IN_REVIEW | `docs/DSG-02-hi-fi`, [PR #6](https://github.com/DukTai-NDT/Nhua_Xanh/pull/6) | Five screens at desktop 1440/mobile 390, state controls, local prototype, tokens, contrast notes and asset provenance. `node --check`, HTML structure check and `git show --check` PASS. Browser screenshots/visual QA NOT RUN because no browser is available. Concept A selected; G1 pending; no third-party design tool used. |
-| `FE-01` Foundation | PREPARATION — visual work gated | Plan in [PR #5](https://github.com/DukTai-NDT/Nhua_Xanh/pull/5) | Technical structure/scripts are planned; no app scaffold or visual implementation until DSG-02 review and explicit G1 approval. |
-| `QA-01` Test scaffolding | PREPARATION — implementation gated | Plan in [PR #5](https://github.com/DukTai-NDT/Nhua_Xanh/pull/5) | Foundation test matrix/CI plan prepared; implementation/execution depends on FE-01. |
+| `DSG-02` UX & hi-fi | IN_REVIEW — G1 APPROVED | `docs/DSG-02-hi-fi`, [PR #6](https://github.com/DukTai-NDT/Nhua_Xanh/pull/6) | PO approved G1 for commit `70234846095737d6d09657bda5025601631b9a29` in [PR #6 comment](https://github.com/DukTai-NDT/Nhua_Xanh/pull/6#issuecomment-6139240456). Browser visual QA remains mandatory in FE/QA. |
+| `FE-01` Foundation | IN_PROGRESS | `feat/FE-01-foundation`; PR pending | G1 handoff approved. Implement Next.js App Router, strict TypeScript, Tailwind v4, tokens, responsive Header/Footer, skip link, focus/reduced motion, 404 and Vietnamese metadata. Browser QA at 1440/390 is mandatory. |
+| `QA-01` Test scaffolding | READY AFTER FE-01 BASELINE | Plan in [PR #5](https://github.com/DukTai-NDT/Nhua_Xanh/pull/5); implementation branch pending | Start after FE-01 package/scripts exist; add CI, unit/E2E/a11y tooling and independently review the foundation. |
 
 ## Approval and scope notes
 
-- Existing client answers remain in `12-DECISIONS-RISKS.md`. New human decision D-OPS-002 selects Concept A for DSG-02; it does not approve G1.
+- Existing client answers remain in `12-DECISIONS-RISKS.md`. D-OPS-002 records Concept A selection; D-OPS-003 records PO's G1 approval for the exact DSG-02 commit with mandatory browser QA conditions.
 - Q-001 remains open for the exact demo presentation of candidate collection points. Candidate research is internal and not included in a public dataset.
-- Q-002 is ANSWERED per the PO comment on PR #4. DSG-02 must complete and receive human review; FE visual work remains gated until explicit G1 approval.
+- Q-002 is ANSWERED. G1 is approved per the PO comment on PR #6; G2–G5 and DSG-02/FE/QA acceptance remain open.
 - Google Stitch was assessed as unnecessary for DSG-01. No Stitch access, project creation, login, or cost occurred.
-- PRs #1–#6 are open and unmerged; no PR was self-approved or auto-merged. No production deployment occurred.
+- PRs #1–#6 are open and unmerged; PR #4 remains draft. GitHub currently reports them mergeable. No PR was self-approved or auto-merged. No production deployment occurred.
+
+## Suggested review / merge order (not approval)
+
+1. Review PR #1 coordination/audit updates; PR #2 README repair and PR #3 sourced-candidate research are independent and may be reviewed in parallel.
+2. PR #5 is a planning document and may merge independently. Review/merge PR #4 DSG-01 before PR #6 DSG-02 because DSG-02 depends on its selected concept.
+3. Review/merge PR #6 after PR #4. G1 is already recorded against its exact commit, but that comment is not PR approval or merge.
+4. FE-01 is based on `main` and references the G1-approved handoff; its PR can be reviewed while PR #6 awaits human merge. Do not merge FE-01 before the design PRs and required reviews are resolved.
 
 ## Next actions
 
-1. Human reviews PRs #1–#6. DSG-02 is ready for design review; Concept A is selected, while G1 remains pending.
-2. PO/qualified reviewer reviews the five screens and prototype, gives feedback, and records explicit G1 approval before visual FE implementation.
-3. FE-01 and QA-01 plans are prepared in PR #5. Start implementation only after G1; run QA-01 after FE-01 exists.
+1. Human reviews PRs #1–#6 and selects a merge order; no agent merges or approves them.
+2. FE-01 implements the G1-approved handoff and captures browser evidence at 1440/390; G1 does not waive visual QA.
+3. Start QA-01 after FE-01 package/scripts exist; add CI and independent browser/accessibility checks.
 4. PO/operator continues DAT-01 verification from SP0-03 candidates. Do not publish candidates as operating/verified points.
 
 ## Checks and limitations
@@ -46,4 +53,5 @@
 - PR #3: `git diff --cached --check` PASS; app tests/build/lint/typecheck NOT RUN; documentation-only research.
 - PR #4: PowerShell XML parse for both SVG files PASS; `git diff --cached --check` PASS; app checks NOT RUN; browser screenshots NOT RUN.
 - PR #6: `node --check docs/design/dsg02-prototype.js` PASS; Python `HTMLParser` nesting check PASS (0 mismatches, 0 unclosed tags); `git show --check --oneline HEAD` PASS. Browser screenshot/visual QA NOT RUN because no browser executable or CUA browser surface is available; app lint/build/unit/E2E NOT RUN because no app/scripts exist.
+- G1: PO comment on PR #6 explicitly approves commit `70234846095737d6d09657bda5025601631b9a29`; approval is limited to design handoff and requires FE visual QA. It is not a QA/accessibility/UAT/release approval.
 - This snapshot does not claim independent QA of the design agent's artifacts or human acceptance of any ticket.

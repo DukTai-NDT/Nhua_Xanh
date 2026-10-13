@@ -36,6 +36,6 @@ The repo already records answers on customer/demo nature, temporary branding/gen
 - Asked by / date: Tech Lead / 2026-10-13.
 - Context: `DSG-01` proposal in [PR #4](https://github.com/DukTai-NDT/Nhua_Xanh/pull/4), with two Modern Eco Editorial directions and responsive Header/Footer boards.
 - Question: Which direction should Design carry into DSG-02: Concept A, Concept B, or a requested revision?
-- Human answer (2026-10-13): Chọn Concept A — “Sổ tay vật liệu” làm hướng art direction cho DSG-02. Concept B được giữ làm tư liệu đối chiếu, không triển khai song song. Phê duyệt này **không phải G1** và không duyệt hi-fi, component states, prototype, asset/font cuối hoặc implementation giao diện.
-- Approval/evidence link: [PO comment on PR #4](https://github.com/DukTai-NDT/Nhua_Xanh/pull/4#issuecomment-6139008847).
-- Impacts: `DSG-02`, `FE-01`, `QA-01`, G1. FE visual work vẫn chờ DSG-02 review và phê duyệt G1 rõ ràng.
+- Human answer (2026-10-13): Chọn Concept A — “Sổ tay vật liệu” làm hướng art direction cho DSG-02. Concept B được giữ làm tư liệu đối chiếu, không triển khai song song. Quyết định ban đầu không phải G1; PO đã duyệt G1 sau khi review handoff DSG-02 tại PR #6.
+- Approval/evidence link: [PO comment on PR #4 — chọn Concept A](https://github.com/DukTai-NDT/Nhua_Xanh/pull/4#issuecomment-6139008847); [PO comment on PR #6 — G1 APPROVED](https://github.com/DukTai-NDT/Nhua_Xanh/pull/6#issuecomment-6139240456).
+- Impacts: `DSG-02`, `FE-01`, `QA-01`, `FE-02`, `FE-03`, `FE-04`. FE visual implementation được phép theo handoff commit `70234846095737d6d09657bda5025601631b9a29`; bắt buộc browser visual QA desktop/mobile và kiểm tra các mục PO liệt kê trước nghiệm thu. G2–G5 vẫn chưa được duyệt.
