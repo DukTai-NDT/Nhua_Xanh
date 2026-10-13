@@ -1,65 +1,47 @@
-# Development status — Nhựa Xanh Hà Nội
+# Development status ? Nh?a Xanh H? N?i
 
-> Latest repo snapshot for PO/human review. Tests are only reported as PASS when actually run.
+> Latest coordination snapshot for PO/human review. An open PR is not accepted or merged; tests are reported as PASS only when actually run.
 
-## Latest verified repository baseline
+## Verified baseline
 
-- Reviewed at: 2026-10-13
+- Reviewed: 2026-10-13
 - Repository: `DukTai-NDT/Nhua_Xanh`
-- Base branch / HEAD: `main` / `bd3324bb5275b5e5d3d62684aeb9e63eb1f4b6b4` (also `origin/main` at audit start)
-- Audit branch: `chore/SP0-01-repo-audit`
-- Tracked contents: `AGENTS.md`, master plan, product spec pack (README + 13 specs), coordination docs, and `.github/pull_request_template.md`.
-- Untracked at audit start: `INSTALL.md`; preserved and excluded from this ticket.
-- Application source: no `src/`, `app/`, `pages/`, `public/`, or `tests/` directories.
-- Project/dependency configuration: no `package.json`, npm/pnpm/yarn/bun lockfile, `tsconfig.json`, Next config, Tailwind/PostCSS config, ESLint config, Vitest/Playwright config, or declared scripts/dependencies. Therefore installed environment versions (Node `v22.16.0`, npm `10.9.2`) do not establish project dependency versions.
-- CI: no `.github/workflows/` files.
-- Existing implementation: none found. No routes, components, data schema, map, validation, SEO implementation, tests, or deployment configuration.
-- Git baseline correction: previous status recorded HEAD `1f8bb3de…`; current `main` is `bd3324bb…` (2026-10-13). This audit used the actual checked-out tree.
+- Main HEAD at audit: `bd3324bb5275b5e5d3d62684aeb9e63eb1f4b6b4`
+- Application baseline: no Next.js app, package manifest/lockfile, declared scripts, tests, or CI workflows on `main`.
+- Existing untracked user file: `INSTALL.md`; preserved and excluded from all sprint branches.
+- Root README issue: 14 broken doc links and a malformed NUL-interleaved trailing fragment. Separate repair is proposed in PR #2.
+- Application lint/typecheck/unit/E2E/build: **NOT RUN**; no app or scripts exist.
 
-## README audit
+## Sprint W1 ticket status
 
-- Root `README.md` is valid UTF-8 through its product-pack content, then ends with 13 NUL bytes and a NUL-interleaved `# Nhua_Xanh` fragment (UTF-16-like bytes). This malformed trailing fragment is the encoding anomaly.
-- The 14 Markdown links to specs/decision log use root-relative targets such as `01-PRD.md`; all resolve as broken because the files are under `docs/nhua-xanh-hanoi-v1-spec/`.
-- The product spec pack README uses correct relative links within its directory.
-- README was inspected, not modified in this audit.
+| Ticket | Status | Branch / PR | Evidence and next action |
+|---|---|---|---|
+| `SP0-01` Repo audit | IN_REVIEW | `chore/SP0-01-repo-audit`, [PR #1](https://github.com/DukTai-NDT/Nhua_Xanh/pull/1) | Audit confirms the baseline above. PR #1 has no reviews, comments, or inline review threads as of 2026-10-13; human review remains pending. App checks NOT RUN. |
+| README follow-up | IN_REVIEW | `fix/readme-links-encoding`, [PR #2](https://github.com/DukTai-NDT/Nhua_Xanh/pull/2) | All 14 links resolve; 0 NUL bytes remain; `git diff --check` PASS. Documentation-only; app checks NOT RUN. |
+| `SP0-03` Data discovery | IN_REVIEW | `research/SP0-03-hanoi-candidates`, [PR #3](https://github.com/DukTai-NDT/Nhua_Xanh/pull/3) | 18 sourced candidate leads from a 2026 Coca-Cola Vietnam program page. `SOURCED=18`, `VERIFIED=0`, `PUBLISHED=0`; not map-ready. `git diff --cached --check` PASS. DAT-01 needs human/operator verification and reuse permission. Q-001 remains open. |
+| `DSG-01` Art direction | IN_REVIEW | `docs/DSG-01-modern-eco-concepts`, [draft PR #4](https://github.com/DukTai-NDT/Nhua_Xanh/pull/4) | Two distinct Modern Eco Editorial proposals, token sets, desktop/mobile Header/Footer SVG boards, and asset/font provenance. SVG XML parse and `git diff --cached --check` PASS. No browser screenshots; boards are static review artifacts. No Stitch used. PO concept selection pending; no G1 approval. |
+| `FE-01` Foundation | BLOCKED ? approval gate | Not started | Backlog dependencies include `SP0-01` and `DSG-01`; the concept pack is proposed but not selected. Visual implementation must wait for human design approval/G1 and the required responsive design handoff. |
+| `QA-01` Test scaffolding | BLOCKED ? dependency | Not started | Depends on FE-01. No tests or CI configuration exist yet. |
 
-## SP0-01 report
+## Approval and scope notes
 
-- Ticket / role: `SP0-01 Repo audit` / Tech Lead
-- Status: IN_REVIEW
-- Branch / commit / PR: `chore/SP0-01-repo-audit` / `c0e90b7` (audit commit; final status-link commit follows) / [PR #1](https://github.com/DukTai-NDT/Nhua_Xanh/pull/1)
-- Scope: inspect repository and baseline only; no application code was created and product requirements were not changed.
-- Tests/build/lint/typecheck/unit/E2E: **NOT RUN**. There is no app, package manifest, dependency installation, or scripts to execute. This is not a PASS.
-- Informational environment commands: `node --version` → `v22.16.0`; `npm --version` → `10.9.2`.
+- Existing client answers remain in `12-DECISIONS-RISKS.md`; no new human decision or G1 approval was received in this sprint work.
+- Q-001 remains open for the exact demo presentation of candidate collection points. Candidate research is internal and not included in a public dataset.
+- Q-002 now asks the PO/customer to choose Concept A, Concept B, or request revisions. A concept choice alone is not G1; FE visual work remains gated on the required design review/approval.
+- Google Stitch was assessed as unnecessary for DSG-01. No Stitch access, project creation, login, or cost occurred.
+- PRs #1?#4 are open and unmerged; no PR was self-approved or auto-merged. No production deployment occurred.
 
-## Comparison to product baseline
+## Next actions
 
-- PRD P0 routes and capabilities (`/`, `/loai-nhua`, resin detail, `/phan-loai`, `/ban-do`, approved static data, release quality): **not implemented**.
-- Architecture baseline (Next App Router, strict TypeScript, Tailwind v4, typed static data, Leaflet client map + server/list fallback, SEO, validation/tests/CI): **not initialized**; no dependencies or versions are declared.
-- Roadmap: `SP0-01` is the first ticket; `FE-01 Foundation` is next in the technical sequence and depends on `SP0-01` and `DSG-01`. `DSG-01` design contract/G1 is not evidenced in this repository. FE-01 acceptance summary is Next App Router + TypeScript + Tailwind tokens, responsive Header/Footer, 404 and SEO base. No foundation implementation was started here.
+1. Human reviews PRs #1?#4 and selects/revises a concept in response to Q-002.
+2. Design completes DSG-02 responsive hi-fi screens, component states and prototype against the selected direction; human records G1 approval.
+3. After required dependencies/gates are satisfied, start `FE-01` on its ticket branch; then assign `QA-01` after FE-01 exists.
+4. PO/operator continues DAT-01 verification from SP0-03 candidates. Do not publish candidates as operating/verified points.
 
-## Risks and blockers
+## Checks and limitations
 
-- High: README links prevent navigation from repository root; malformed trailing NUL/UTF-16-like bytes can confuse tooling/readers.
-- High: repository has no runnable application or declared dependency baseline, so there is no app-level test/build baseline.
-- High / release critical: no verified collection-point dataset or app implementation; public map cannot claim working/verified points. Existing Q-001 covers candidate point labels; do not re-ask answers already recorded in spec 12.
-- High: design details and G1 approval are absent; FE-01's `DSG-01` dependency is unmet. See Q-002 in `OPEN-QUESTIONS.md`.
-- Medium: previous DEV-STATUS HEAD was stale relative to actual main.
-- Existing `INSTALL.md` is untracked user material and was left untouched.
-
-## Recommended next work
-
-1. PO/design completes `DSG-01` and records the selected concept/design contract and G1 approval. Keep `Modern Eco Editorial` as the confirmed direction; no agent should mark G1 approved.
-2. Then assign `FE-01 Foundation` on `feat/FE-01-foundation`: initialize the agreed Next App Router/strict TypeScript/Tailwind baseline with compatible pinned dependencies and committed lockfile; establish semantic responsive Header/Footer, skip link/focus/reduced-motion baseline, 404, Vietnamese metadata/SEO base, and token mapping from approved design. Keep scope to foundation; do not build home/library/sorting/map pages or introduce backend/tracking.
-3. Define available scripts for lint, typecheck, unit, and build alongside the scaffold; add only foundation-proportional checks. QA scaffolding is separately tracked as `QA-01` and depends on FE-01.
-4. Capture desktop/mobile screenshots for implemented UI and document asset/font provenance. Do not claim tests/screenshots until produced.
-5. Track verified point research through `SP0-03`/`DAT-01`; never ship candidate mock points as verified data.
-
-## SP0-01 handoff
-
-- Files changed: `docs/coordination/DEV-STATUS.md`, `docs/coordination/OPEN-QUESTIONS.md`
-- Tests: application checks NOT RUN (reason above).
-- Screenshots/preview: not applicable to repository audit.
-- Design/content approvals: none requested or granted by this audit.
-- Questions: `Q-001` remains open for the candidate demo point presentation rule; `Q-002` records the pending design/G1 contract needed by FE-01.
-- PR: [#1 — repository audit and FE-01 recommendation](https://github.com/DukTai-NDT/Nhua_Xanh/pull/1), open for PO review.
+- PR #1: audit-only documentation; application tests NOT RUN because no app/package scripts exist.
+- PR #2: local link check (14 links, 0 broken), NUL-byte check (0), `git diff --check` PASS.
+- PR #3: `git diff --cached --check` PASS; app tests/build/lint/typecheck NOT RUN; documentation-only research.
+- PR #4: PowerShell XML parse for both SVG files PASS; `git diff --cached --check` PASS; app checks NOT RUN; browser screenshots NOT RUN.
+- This snapshot does not claim independent QA of the design agent's artifacts or human acceptance of any ticket.

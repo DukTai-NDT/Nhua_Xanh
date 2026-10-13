@@ -30,13 +30,13 @@ The repo already records answers on customer/demo nature, temporary branding/gen
 - Impacts:
 ```
 
-## Q-002 — FE-01 design contract and G1 readiness
+## Q-002 ? Select a DSG-01 concept for the next design stage
 
-- Status: `OPEN` (blocks visual parts of FE-01; no G1 approval is recorded in the repository).
+- Status: `OPEN` (proposal is ready; no concept selection or G1 approval is recorded).
 - Asked by / date: Tech Lead / 2026-10-13.
-- Context: `SP0-01` audit; `07-ROADMAP-BACKLOG.md` lists `DSG-01` as an FE-01 dependency and `02-DESIGN-SYSTEM.md` requires PO/customer design approval before bulk FE implementation.
-- Question: Please provide or approve the `DSG-01` concept/design contract and record G1 approval before FE-01 implements the responsive Header/Footer and visual tokens.
-- Recommendation: Complete `DSG-01` first, preserving the confirmed Modern Eco Editorial direction; then start FE-01 against the approved tokens/components.
+- Context: `DSG-01` proposal in [PR #4](https://github.com/DukTai-NDT/Nhua_Xanh/pull/4), with two Modern Eco Editorial directions and responsive Header/Footer boards.
+- Question: Which direction should Design carry into DSG-02: Concept A ? S? tay v?t li?u, Concept B ? M?c l?c ?? th?, or a requested revision?
+- Recommendation: Review both boards and choose or request specific changes. This concept choice is not itself G1 approval; DSG-02 must still deliver the required hi-fi responsive screens, component states, and prototype for human review before FE visual implementation.
 - Human answer: _Pending._
 - Approval/evidence link: _Pending._
-- Impacts: `DSG-01`, `FE-01`, G1.
+- Impacts: `DSG-02`, `FE-01`, G1.
