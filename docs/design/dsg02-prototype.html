@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Prototype thiết kế DSG-02 theo hướng Sổ tay vật liệu.">
+  <title>DSG-02 · Sổ tay vật liệu</title>
+  <link rel="stylesheet" href="./dsg02-prototype.css">
+  <script src="./dsg02-prototype.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#prototype">Bỏ qua phần điều khiển, xem bản thiết kế</a>
+  <header class="workbench">
+    <div class="workbench__top">
+      <div>
+        <p class="workbench__eyebrow">NHỰA XANH HÀ NỘI · DSG-02</p>
+        <h1>Prototype thiết kế · Sổ tay vật liệu</h1>
+        <p class="workbench__summary">Bản xem xét hi-fi. Chưa phải giao diện sản phẩm và chưa được duyệt G1.</p>
+      </div>
+      <a class="workbench__spec" href="./DSG-02-hi-fi.md">Đọc thuyết minh thiết kế <span aria-hidden="true">↗</span></a>
+    </div>
+    <div class="workbench__controls">
+      <div class="control-group">
+        <span class="control-label" id="screen-label">Màn hình</span>
+        <div class="segmented" role="tablist" aria-labelledby="screen-label">
+          <button class="segment is-active" type="button" role="tab" aria-selected="true" data-screen="home">Trang chủ</button>
+          <button class="segment" type="button" role="tab" aria-selected="false" data-screen="list">Các loại nhựa</button>
+          <button class="segment" type="button" role="tab" aria-selected="false" data-screen="detail">Chi tiết PET</button>
+          <button class="segment" type="button" role="tab" aria-selected="false" data-screen="sorting">Phân loại</button>
+          <button class="segment" type="button" role="tab" aria-selected="false" data-screen="map">Bản đồ / danh sách</button>
+        </div>
+      </div>
+      <div class="control-group">
+        <span class="control-label" id="viewport-label">Khung xem</span>
+        <div class="segmented segmented--short" role="group" aria-labelledby="viewport-label">
+          <button class="segment is-active" type="button" aria-pressed="true" data-viewport="desktop">Desktop · 1440</button>
+          <button class="segment" type="button" aria-pressed="false" data-viewport="mobile">Điện thoại · 390</button>
+        </div>
+      </div>
+      <div class="control-group control-group--state">
+        <label class="control-label" for="state">Trạng thái cần xem</label>
+        <select id="state" class="state-select">
+          <option value="default">Mặc định</option>
+          <option value="loading">Đang tải</option>
+          <option value="empty">Rỗng</option>
+          <option value="error">Lỗi tải nội dung / bản đồ</option>
+          <option value="selected">Mẫu thẻ đang chọn</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main id="prototype" class="preview-area" tabindex="-1">
+    <div class="device-frame" id="device-frame" data-viewport="desktop">
+      <div id="screen-root" aria-live="polite" tabindex="-1"></div>
+    </div>
+  </main>
+  <footer class="workbench-footer">
+    <span>Thiết kế đề xuất · Concept A được PO chọn tại PR #4.</span>
+    <span>G1 chưa được phê duyệt · minh họa tự vẽ · không có dữ liệu điểm thật.</span>
+  </footer>
+</body>
+</html>
